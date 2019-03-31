@@ -13,5 +13,13 @@
 
 Route::get('/', function () {
     return view('welcome');
-Route::get('/user', 'UserController@index');
 });
+Route::get('/user', 'UserController@index');
+// Route::get('/user', 'SentController@index');
+Route::get('/base', 'BaseController@index');
+Route::get('/sent', 'SentController@index');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
