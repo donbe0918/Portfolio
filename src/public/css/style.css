@@ -75,11 +75,11 @@ input[type="submit"] {
   border: 1px solid #5cb85c;
   border-radius: 4px;
   padding: 12px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(91, 180, 131, 0.075);
   font-size: 14px;
   line-height: 1.428571429;
   color: white;
-  background-color: #5cb85c;
+  background-color: #b1b6b1;
 }
 
 textarea {

@@ -14,11 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/user', 'UserController@index');
+
 // Route::get('/user', 'SentController@index');
 Route::get('/base', 'BaseController@index');
-Route::get('/sent', 'SentController@index');
 
+// ユーザーが入力するURL
+Route::get('/user', 'UserController@index');
+
+// 送信を受け取るようのURL
+Route::post('/sent', 'SentController@index');
+
+// セッションで保存した内容を出力するコントローラー
+Route::get('/re-enter', 'Re-EnterController@index');
 
 Auth::routes();
 

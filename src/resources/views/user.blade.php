@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 
-
 <!-- ページの本体 -->
 <!DOCTYPE html>
 <html>
@@ -37,7 +36,10 @@
     
     <div class="contact-form">
       <div class="form-title">応募フォーム</div>
-      <form method="post" action="sent.blade.php">
+      <form method="post" action="{{url('/sent')}}">
+      <!-- CSRFトークン -->
+      {{ csrf_field() }}
+        <!-- 名前を入力する -->
         <div class="form-item">名前</div>
         <input type="text" name="name">
 
